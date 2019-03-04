@@ -1,0 +1,21 @@
+<div class="w3-main" style="margin-left:250px">
+
+  <body>
+    <!-- main -->
+    <div class="main-w3layouts wrapper">
+      <h1>Creative SignUp Form</h1>
+      <div class="main-agileinfo">
+        <div class="agileits-top">
+          <form action="#" method="post">
+            <input class="text" type="text" [(ngModel)] ='user' name="user" placeholder="Username" required="required">
+            <input class="text email" type="email" [(ngModel)] ='email' name="email" placeholder="Email" required="required">
+            <input class="text" type="password" [(ngModel)] ='pw' name="pw" placeholder="Password" required="required">
+            <input class="text w3lpass" type="password" [(ngModel)] ='cpw' name="cpw" placeholder="Confirm Password" required="required">
+            <input (click) = 'onSubmit()' type="submit" value="SIGNUP">
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- //main -->
+  </body>
+</div>

@@ -1,0 +1,33 @@
+<div class="w3-main" style="margin-left:250px">
+    <div *ngIf="product">
+        <form id="form">
+          <p>NAME <input [(ngModel)]='product.name' value='selected.name' name="name" type="text" required placeholder="Name"></p>
+          <p>PRICE<input [(ngModel)]='product.price' value='selected.price' name="price" type="text" required placeholder="Price"></p>
+          <p>PICTURE<input [(ngModel)]='product.pic'  value='selected.pic' name="image" type="text" required placeholder="Link Picture"></p>
+          <p>DETAIL<input [(ngModel)]='product.detail'  value='selected.detail' name="decription" type="text" required  placeholder="Description"></p>
+          <input type="button" value="Add" (click)="addCrud(product)">
+          <input type="button" value="Update" (click)="updateCrud()" >
+        </form>
+      </div>
+    <table border="1" id="models">
+        <tr>
+          <th>Name</th>
+          <th>Picture</th>
+          <th>Price</th>
+          <th>Description</th>
+          <th>Selected</th>
+          <th>Deleted</th>
+        </tr>
+        <tr *ngFor="let item of listproducts,let i = index">
+          <td>{{item.name}}</td>
+          <td>
+            <img src="{{item.pic}}" alt="" style="width: 100px; height: 100px;">
+          </td>
+          <td>{{item.price}}</td>
+          <td>{{item.detail}}</td>
+          <td><button (click)="selected(i)" class="btnAddToCart">Selected</button></td>
+          <td><button (click)="deletedCrud(i)" class="btnAddToCart">Deleted</button></td>
+        </tr>
+      
+      </table>
+</div>

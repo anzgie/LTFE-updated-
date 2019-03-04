@@ -1,0 +1,10 @@
+<div class="w3-main" style="margin-left:250px">
+  <div class="login">
+    <h1>Login</h1>
+    <form method="post">
+      <input type="text" [(ngModel)] ='user' name="user" placeholder="Username" required="required" />
+      <input type="password" [(ngModel)] ='pw' name="pw" placeholder="Password" required="required" />
+      <button (click) = 'onSubmit()' class="btn btn-primary btn-block btn-large">Let me in.</button>
+    </form>
+  </div>
+</div>
